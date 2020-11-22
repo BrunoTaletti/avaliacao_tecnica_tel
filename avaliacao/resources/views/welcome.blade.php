@@ -19,7 +19,7 @@
                 <img src="{{ asset('assets/img/welcome-monster.png') }}">
             </div>
             <div class="card-content">
-                <h1>{{ __('MyCustomer') }}</h1>
+                <h1>Awesome Customer</h1>
                 
                 <h3>
                     {{ __('Ainda não conhece a gente? aqui vai uma breve introdução, somos simplesmente 
