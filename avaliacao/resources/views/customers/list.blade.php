@@ -5,6 +5,10 @@
 @section('subtitle', 'Gerencie seus clientes')
 
 @section('content')
+    <a href="{{ url('customers/new-customer') }}">
+        Adicionar cliente
+    </a>
+    
     <table class="customers-table">
         <thead>
             <tr>
@@ -23,6 +27,7 @@
         </thead>
         <tbody>
             @foreach ( $customers_data as $customer )
+            <tr>
                 <td>{{ $customer->name }}</td>
                 <td>{{ $customer->cpf }}</td>
                 <td>{{ $customer->rg }}</td>
@@ -34,9 +39,15 @@
                 <td>{{ $customer->updated_by }}</td>
                 <td>{{ $customer->updated_at }}</td>
                 <td>
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
+                    <a href="customers/{{ $customer->id }}/edit">Editar</a>
+                    
+                    <form method="POST" action="customers/delete/{{ $customer->id }}">
+                        @csrf
+                        @method('delete')
+                        <button type="submit">Deletar</button>
+                    </form>
                 </td>
+            <tr>
             @endforeach
         </tbody>
     </table>
