@@ -14,9 +14,11 @@ class Customer extends Model
         'name',
         'cpf',
         'rg',
-        'bith_date',
+        'birth_date',
         'telephone',
         'birth_place',
+        'created_by',
+        'created_at',
         'updated_by',
         'updated_at',
     ];

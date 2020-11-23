@@ -25,5 +25,10 @@ Route::group(['middleware' => 'web'], function ()
     Route::get('/home',[App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
 });
 
-Route::get('/customers',[App\Http\Controllers\CustomersController::class, 'list_customers'])->name('customers.list');
-Route::get('/customers/new',[App\Http\Controllers\CustomersController::class, 'new_customer'])->name('customers.new');
+Route::get('/customers',[App\Http\Controllers\CustomersController::class, 'list'])->name('customers.list')->middleware('auth');
+Route::get('/customers/new',[App\Http\Controllers\CustomersController::class, 'new'])->name('customers.form')->middleware('auth');
+Route::get('/customers/{id}/edit',[App\Http\Controllers\CustomersController::class, 'edit'])->name('customers.form')->middleware('auth');
+
+Route::post('/customers/add',[App\Http\Controllers\CustomersController::class, 'add'])->name('customers.add')->middleware('auth');
+Route::post('/customers/update/{id}',[App\Http\Controllers\CustomersController::class, 'update'])->name('customers.update')->middleware('auth');
+Route::delete('/customers/delete/{id}',[App\Http\Controllers\CustomersController::class, 'delete'])->name('customers.delete')->middleware('auth');
