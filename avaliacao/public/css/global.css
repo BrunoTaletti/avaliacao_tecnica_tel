@@ -5,7 +5,8 @@
     font-family: "Poppins", sans-serif;
   }
   
-  body{
+  body
+  {
     background-image: url("../assets/img/galaxy-background.jpg");
     background-repeat: repeat;
     background-size: cover;
@@ -17,31 +18,54 @@
     perspective: 1000px;
   }
   
-  .card-container{
+  .card-container
+  {
     width: 50%;;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  .card-app-container
+  {
+    width: 90%;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     
-  .card-box{
+  .card-box
+  {
     background-color: #fff;
     transform-style: preserve-3d;
-    min-height: 80%;
-    width: 80%;
+    min-height: 100%;
+    width: 100%;
     border-radius: 30px;
     padding: 5% 5%;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
   }
+
+  .card-app-box
+  {
+    background-color: #fff;
+    transform-style: preserve-3d;
+    min-height: 90%;
+    width: 90%;
+    border-radius: 30px;
+    padding: 2% 2%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+  }
   
-  .card-content h1{
+  .card-content h1
+  {
     font-size: 3rem;
-    padding: 5% 0;
+    padding: 1% 0;
     text-align: center;
     transition: all 0.75s ease-out;
   }
   
-  .card-content h3{
+  .card-content h3
+  {
     font-size: 1.3rem;
     text-align: center;
     padding: 2% 0;
@@ -50,7 +74,8 @@
     transition: all 0.75s ease-out;
   }
   
-  .card-content input{
+  .card-content input, select
+  {
     width: 100%;
     padding: 1rem 1rem;
     margin: 0.25rem 0rem;
@@ -59,23 +84,27 @@
     font-weight: lighter;
     transition: all 0.75s ease-out;
   }
-  
-  .card-content input:hover{
+
+  .card-content input:hover, select:hover
+  {
     border: 2px solid #dadada;
     transition: all 0.75s ease-out;
   }
   
-  .card-content input:focus{
+  .card-content input:focus, select:focus
+  {
     background: #f1f1f1;
     transition: all 0.75s ease-out;
   }
   
-  .card-content form{
+  .card-content form
+  {
     margin: 2% 0;
     transition: all 0.75s ease-out;
   }
   
-  .circle{
+  .circle
+  {
     width: 15rem;
     height: 15rem;
     background: linear-gradient(
@@ -88,20 +117,23 @@
     z-index: 1;
   }
   
-  .monster{
+  .monster
+  {
     min-height: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .monster img{
+  .monster img
+  {
     width: 13rem;
     z-index: 2;
     transition: all 0.75s ease-out;
   }
   
-  .button{
+  .button
+  {
     width: 100%;
     margin: 1% 0;
     padding: 1rem 0rem;
@@ -114,21 +146,25 @@
     transition: all 0.75s ease-out;
   }
   
-  .button-block{
+  .button-block
+  {
     display: block;
     width: 100%;
   }
   
-  .button-link{
+  .button-link
+  {
     text-decoration: none;
     transition: all 0.75s ease-out;
   }
 
-  .button-link:hover{
+  .button-link:hover
+  {
     text-decoration: none;
   }
   
-  .button-link-purple{
+  .button-link-purple
+  {
     text-decoration: none;
     color:#9900cc;
   }
@@ -137,48 +173,58 @@
     color:#bf5ced;
   }
   
-  .button-purple{
+  .button-purple
+  {
     background: #9900cc;
   }
   
-  .button-purple:hover{
+  .button-purple:hover
+  {
     background: #bf5ced;
   }
   
-  .button-red{
+  .button-red
+  {
     background: #ff0000;
   }
   
-  .button-red:hover{
+  .button-red:hover
+  {
     background: #ff3d3d;
   }
   
-  .button-card{
+  .button-card
+  {
     color: #000000;
     text-decoration: none;
     transition: all 0.5s ease-out;
   }
   
-  .button-card:hover{
+  .button-card:hover
+  {
     color: #585858;
   }
   
-  .batao-menu{
+  .batao-menu
+  {
     font-size: 1.5rem;
     text-decoration: none;
     color: #000000;
     transition: all 0.75s ease-in-out;
   }
   
-  .button-menu:hover{
+  .button-menu:hover
+  {
     color: #585858;
   }
 
-  .buttons{
+  .buttons
+  {
     margin-top: 1em;
   }
 
-  .nav-bar{
+  .nav-bar
+  {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -187,3 +233,18 @@
     padding-bottom: 1.5rem;
   }
   
+  .customers-table
+  {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .customers-table th, .customers-table td
+  {
+    padding: .25rem .75rem;
+  }
+
+  .customers-table td
+  {
+    border-top: 1px solid #f1f1f1;
+  }

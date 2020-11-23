@@ -6,7 +6,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>MyCustomer - Customers</title>
+    <title>@yield('title')</title>
     
     <script src="{{ asset('js/card-animation.js') }}"></script>
 
@@ -35,7 +35,9 @@
                 
                 <h1>Awesome Customer</h1>
                 
-                <h3>Gerencie seus clientes</h3>
+                <h3>@yield('subtitle')</h3>
+
+                @yield('content')
             </div>
         </div>
     </div>
