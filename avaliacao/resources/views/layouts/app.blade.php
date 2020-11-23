@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/8014fa37a7.js" crossorigin="anonymous"></script>
 
     <link href="{{ asset('css/global.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="card-container">

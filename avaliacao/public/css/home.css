@@ -1,0 +1,38 @@
+.sections{
+    margin-top: 1em;
+    transition: all 0.75s ease-out;
+}
+
+.section{
+    width: 100%;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    padding: 5% 5%;
+    margin: 1% 0;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.section:hover{
+    background-color: #f1f1f1;
+}
+
+.section h1{
+    display: inline;
+    float: right;
+}
+
+.section h2{
+    text-align: left;
+}
+
+.section h3{
+    text-align: justify;
+}
+
+.section em{
+    font-size: 80px;
+    display: inline;
+    float: left;
+    margin-right: 1rem;
+}
