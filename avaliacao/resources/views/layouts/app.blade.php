@@ -36,26 +36,6 @@
                 <h1>Awesome Customer</h1>
                 
                 <h3>Gerencie seus clientes</h3>
-
-                <table class="customers-table">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>RG</th>
-                            <th>Data de nascimento</th>
-                            <th>Telefones</th>
-                            <th>Local de nascimento</th>
-                            <th>Cadastrado por</th>
-                            <th>Cadastrado em</th>
-                            <th>Editado por</th>
-                            <th>Editado em</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
