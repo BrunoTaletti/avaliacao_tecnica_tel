@@ -1,4 +1,4 @@
-@extends('layouts.login-master')
+@extends('layouts.master-auth')
 
 @section('title', 'Recuperar conta - Awesome Customer')
 
@@ -10,7 +10,7 @@
 
 @section('content')
     <form method="POST" action="{{ route('password.update') }}">
-        @csrf           
+        @csrf
             <div>
                 <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
 
@@ -20,15 +20,15 @@
                     </span>
                 @enderror
             </div>
-                    
+
             <div>
-                <button type="submit" class="button button-purple">
+                <button type="submit" class="button button-purple button-block">
                     Enviar email de recuperação
                 </button>
             </div>
     </form>
 
-    <div class="buttons"> 
+    <div class="buttons">
         <h3>
             <a class="button-link button-link-purple" href="{{ route('login') }}">
                 Voltar para o login

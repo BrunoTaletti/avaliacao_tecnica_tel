@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-small')
 
 @section('title', 'Cadastrar - Awesome Customer')
 
@@ -24,11 +24,11 @@
                     <option value="SP">SP</option>
                 </select>
 
-                <button type="submit" class="button button-purple">Cadastrar</button>
+                <button type="submit" class="button button-block button-purple">Cadastrar</button>
         </form>
     @else
-    
-        <form method="POST" action="{{ url('customers/add') }}"> 
+
+        <form method="POST" action="{{ url('customers/add') }}">
             @csrf
                 <input type="text" name="name" placeholder="Nome" required>
 
@@ -46,10 +46,13 @@
                     <option value="SP">SP</option>
                 </select>
 
-                <button type="submit" class="button button-purple">Cadastrar</button>
+                <button type="submit" class="button button-block button-purple">Cadastrar</button>
         </form>
     @endif
-    <a href="{{ url('customers') }}">
-        Voltar
-    </a>
+
+    <h3>
+        <a class="button-link button-link-purple button-center" href="{{ url('customers') }}">
+            Voltar
+        </a>
+    </h3>
 @endsection

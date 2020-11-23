@@ -1,4 +1,4 @@
-@extends('layouts.login-master')
+@extends('layouts.master-auth')
 
 @section('title', 'Entrar - Awesome Customer')
 
@@ -19,7 +19,7 @@
                     </span>
                 @enderror
             </div>
-            
+
             <div>
                 <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" placeholder="Senha" required autocomplete="current-password">
                 @error('password')
@@ -30,13 +30,13 @@
             </div>
 
             <div>
-                <button type="submit" class="button button-purple">
+                <button type="submit" class="button button-purple button-block">
                     Login
                 </button>
             </div>
     </form>
-        
-        <div class="buttons"> 
+
+        <div class="buttons">
             <h3>
                 Ops,
 
@@ -44,7 +44,7 @@
                     Esqueci minha senha.
                 </a>
             </h3>
-            
+
             <h3>ou</h3>
 
             <h3>

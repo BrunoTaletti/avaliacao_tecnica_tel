@@ -13,19 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => 'web'], function () 
+Route::group(['middleware' => 'web'], function ()
 {
     Route::get('/', function ()
     {
         return view('welcome');
     });
-    
+
     Auth::routes();
-    
-    Route::get('/home',[App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
+
+    Route::get('/home',[App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 
 Route::get('/customers',[App\Http\Controllers\CustomersController::class, 'list'])->name('customers.list')->middleware('auth');
+
 Route::get('/customers/new',[App\Http\Controllers\CustomersController::class, 'new'])->name('customers.form')->middleware('auth');
 Route::get('/customers/{id}/edit',[App\Http\Controllers\CustomersController::class, 'edit'])->name('customers.form')->middleware('auth');
 

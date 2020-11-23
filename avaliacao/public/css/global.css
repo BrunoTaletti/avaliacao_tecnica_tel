@@ -4,11 +4,11 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
-  
+
   body
   {
     background-image: url("../assets/img/galaxy-background.jpg");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
     display: flex;
@@ -17,7 +17,7 @@
     margin: 5%;
     perspective: 1000px;
   }
-  
+
   .card-container
   {
     width: 50%;;
@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
   }
-    
+
   .card-box
   {
     background-color: #fff;
@@ -55,7 +55,7 @@
     padding: 2% 2%;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
   }
-  
+
   .card-content h1
   {
     font-size: 3rem;
@@ -63,7 +63,7 @@
     text-align: center;
     transition: all 0.75s ease-out;
   }
-  
+
   .card-content h3
   {
     font-size: 1.3rem;
@@ -73,7 +73,7 @@
     font-weight: lighter;
     transition: all 0.75s ease-out;
   }
-  
+
   .card-content input, select
   {
     width: 100%;
@@ -90,19 +90,19 @@
     border: 2px solid #dadada;
     transition: all 0.75s ease-out;
   }
-  
+
   .card-content input:focus, select:focus
   {
     background: #f1f1f1;
     transition: all 0.75s ease-out;
   }
-  
+
   .card-content form
   {
     margin: 2% 0;
     transition: all 0.75s ease-out;
   }
-  
+
   .circle
   {
     width: 15rem;
@@ -116,7 +116,7 @@
     border-radius: 50%;
     z-index: 1;
   }
-  
+
   .monster
   {
     min-height: 35%;
@@ -131,12 +131,11 @@
     z-index: 2;
     transition: all 0.75s ease-out;
   }
-  
+
   .button
   {
-    width: 100%;
     margin: 1% 0;
-    padding: 1rem 0rem;
+    padding: 1rem 1rem;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -145,13 +144,13 @@
     text-transform: uppercase;
     transition: all 0.75s ease-out;
   }
-  
+
   .button-block
   {
     display: block;
     width: 100%;
   }
-  
+
   .button-link
   {
     text-decoration: none;
@@ -162,57 +161,72 @@
   {
     text-decoration: none;
   }
-  
+
   .button-link-purple
   {
     text-decoration: none;
     color:#9900cc;
+    transition: all 0.5s ease-out;
   }
-  
+
   .button-link-purple:hover{
     color:#bf5ced;
+    transition: all 0.5s ease-out;
   }
-  
+
+  .button-link-red
+  {
+    text-decoration: none;
+    color:#ff0000;
+    transition: all 0.5s ease-out;
+  }
+
+  .button-link-red:hover{
+    color:#ff3d3d;
+    transition: all 0.5s ease-out;
+  }
+
   .button-purple
   {
     background: #9900cc;
   }
-  
+
   .button-purple:hover
   {
     background: #bf5ced;
   }
-  
+
   .button-red
   {
     background: #ff0000;
   }
-  
+
   .button-red:hover
   {
     background: #ff3d3d;
   }
-  
+
   .button-card
   {
     color: #000000;
     text-decoration: none;
     transition: all 0.5s ease-out;
   }
-  
+
   .button-card:hover
   {
     color: #585858;
   }
-  
-  .batao-menu
+
+  .button-menu
   {
     font-size: 1.5rem;
     text-decoration: none;
+    padding: 0 0.5rem;
     color: #000000;
     transition: all 0.75s ease-in-out;
   }
-  
+
   .button-menu:hover
   {
     color: #585858;
@@ -225,18 +239,35 @@
 
   .nav-bar
   {
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
   }
-  
+
+  .nav-bar-left
+  {
+    flex: 1 1 200px;
+  }
+
+  .nav-bar-right
+  {
+    float: right;
+  }
+
+  .links
+  {
+    display: inline-block;
+    text-align: center;
+  }
+
   .customers-table
   {
+    table-layout: fixed;
     border-collapse: collapse;
     width: 100%;
+    word-wrap: break-word;
   }
 
   .customers-table th, .customers-table td
@@ -247,4 +278,10 @@
   .customers-table td
   {
     border-top: 1px solid #f1f1f1;
+  }
+
+  .customers-table-responsive
+  {
+    min-height: .01%;
+    overflow-x: auto;
   }

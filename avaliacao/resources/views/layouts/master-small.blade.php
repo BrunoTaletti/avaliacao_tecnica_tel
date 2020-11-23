@@ -17,6 +17,7 @@
     <div class="card-container">
         <div class="card-box">
             <div class="card-content">
+
                 <nav class="nav-bar">
                     @guest
                             <h2>Bem vindo, visitante</h2>
@@ -26,18 +27,9 @@
                             </div>
 
                             <div class="nav-bar-right">
-                                <a href="{{ url('settings') }}" class="button-menu links">
-                                    <em class="fas fa-cog"></em>
+                                <a href="javascript:history.back()" class="button-menu links">
+                                    <em class="fas fa-arrow-circle-left"></em>
                                 </a>
-
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();" class="button-menu links">
-                                    <em class="fas fa-sign-out-alt"></em>
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
                             </div>
                     @endguest
                 </nav>

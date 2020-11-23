@@ -1,4 +1,4 @@
-@extends('layouts.login-master')
+@extends('layouts.master-auth')
 
 @section('title', 'Registrar - Awesome Customer')
 
@@ -10,10 +10,10 @@
 
 @section('content')
     <form method="POST" action="{{ route('register') }}">
-        @csrf     
+        @csrf
             <div>
                 <input id="name" type="text" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Nome" required autocomplete="name" autofocus>
-        
+
                 @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -44,18 +44,18 @@
             <div>
                 <input id="password-confirm" type="password" name="password_confirmation" placeholder="Repita sua senha" required autocomplete="new-password">
             </div>
-                    
+
             <div>
-                <button type="submit" class="button button-purple">
+                <button type="submit" class="button button-purple button-block">
                     Login
                 </button>
             </div>
     </form>
 
-    <div class="buttons"> 
+    <div class="buttons">
         <h3>
             Já tem uma conta?
-                        
+
             <a class="button-link button-link-purple" href="{{ route('login') }}">
                 Entre agora mesmo!
             </a>
