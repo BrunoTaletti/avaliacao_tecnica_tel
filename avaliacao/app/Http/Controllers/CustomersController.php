@@ -19,6 +19,6 @@ class CustomersController extends Controller
 
     public function new_customer()  
     {
-        return view(customers.add);
+        return view("customers.add");
     }
 }
