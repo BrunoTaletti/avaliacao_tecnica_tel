@@ -264,7 +264,6 @@
 
   .customers-table
   {
-    table-layout: fixed;
     border-collapse: collapse;
     width: 100%;
     word-wrap: break-word;

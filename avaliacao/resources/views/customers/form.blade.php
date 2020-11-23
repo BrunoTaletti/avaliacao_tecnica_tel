@@ -30,15 +30,18 @@
 
         <form method="POST" action="{{ url('customers/add') }}">
             @csrf
-                <input type="text" name="name" placeholder="Nome" required>
+                <input type="text" name="name" placeholder="Nome">
 
-                <input type="text" name="cpf" placeholder="CPF" required>
+                <input type="text" name="cpf" placeholder="CPF">
 
-                <input type="text" name="rg" placeholder="RG" required">
+                <input type="text" name="rg" placeholder="RG">
+                @error('location') 
+                    <span>{{ $message }}</span>
+                @enderror
 
-                <input type="date" name="birth_date" placeholder="Aniversário" required>
+                <input type="date" name="birth_date" placeholder="Aniversário">
 
-                <input type="text" name="telephone" placeholder="Telefone(s)" multiple required>
+                <input type="text" name="telephone" placeholder="Telefone(s)">
 
                 <select name="birth_place">
                     <option>SELECIONE</option>
@@ -49,10 +52,4 @@
                 <button type="submit" class="button button-block button-purple">Cadastrar</button>
         </form>
     @endif
-
-    <h3>
-        <a class="button-link button-link-purple button-center" href="{{ url('customers') }}">
-            Voltar
-        </a>
-    </h3>
 @endsection
