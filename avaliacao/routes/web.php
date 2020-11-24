@@ -33,3 +33,6 @@ Route::get('/customers/{id}/edit',[App\Http\Controllers\CustomersController::cla
 Route::post('/customers/add',[App\Http\Controllers\CustomersController::class, 'add'])->name('customers.add')->middleware('auth');
 Route::post('/customers/update/{id}',[App\Http\Controllers\CustomersController::class, 'update'])->name('customers.update')->middleware('auth');
 Route::delete('/customers/delete/{id}',[App\Http\Controllers\CustomersController::class, 'delete'])->name('customers.delete')->middleware('auth');
+
+Route::get('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('users.form')->middleware('auth');
+Route::post('/user/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update')->middleware('auth');

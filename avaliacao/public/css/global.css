@@ -186,6 +186,18 @@
     transition: all 0.5s ease-out;
   }
 
+  .button-link-gray
+  {
+    color: #000000;
+    transition: all 0.5s ease-out;
+  }
+
+  .button-link-gray:hover
+  {
+    color: #585858;
+    transition: all 0.5s ease-out;
+  }
+
   .button-purple
   {
     background: #9900cc;
@@ -204,6 +216,16 @@
   .button-red:hover
   {
     background: #ff3d3d;
+  }
+
+  .button-gray
+  {
+    background: #000000;
+  }
+
+  .button-gray:hover
+  {
+    background: #585858;
   }
 
   .button-card
@@ -262,25 +284,54 @@
     text-align: center;
   }
 
-  .customers-table
+  .table
   {
     border-collapse: collapse;
     width: 100%;
     word-wrap: break-word;
   }
 
-  .customers-table th, .customers-table td
+  .table th, .table td
   {
     padding: .25rem .75rem;
   }
 
-  .customers-table td
+  .table td
   {
     border-top: 1px solid #f1f1f1;
   }
 
-  .customers-table-responsive
+  .table-responsive
   {
     min-height: .01%;
     overflow-x: auto;
+  }
+
+  .table-button
+  {
+    color: #fff;
+    border-radius: 50%;
+    padding: .5rem .5rem;
+  }
+
+  .table-button-purple
+  {
+    background-color: #9900cc;
+    transition: all 0.75s ease-in-out;
+  }
+
+  .table-button-purple:hover
+  {
+    background-color: #bf5ced;
+  }
+
+  .table-button-red
+  {
+    background-color: #ff0000;
+    transition: all 0.75s ease-in-out;
+  }
+
+  .table-button-red:hover
+  {
+    background-color: #ff3d3d;
   }

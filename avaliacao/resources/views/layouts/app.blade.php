@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="nav-bar-right">
-                                <a href="{{ url('settings') }}" class="button-menu links">
+                                <a href="user/{{ Auth::user()->id }}/edit" class="button-menu links">
                                     <em class="fas fa-cog"></em>
                                 </a>
 
