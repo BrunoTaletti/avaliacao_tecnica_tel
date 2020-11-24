@@ -11,7 +11,7 @@
             Adicionar cliente
         </button>
     </a>
-    
+
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -42,20 +42,17 @@
                     <td>{{ $customer->updated_by }}</td>
                     <td>{{ $customer->updated_at }}</td>
                     <td>
-                        <a href="customers/{{ $customer->id }}/edit" class="table-button table-button-purple">
+                        <a href="customers/{{ $customer->id }}/edit" class="table-button-icon table-button-purple">
                             <em class="fas fa-pen"></em>
                         </a>
                     </td>
-
                     <td>
-                        <a href="" onclick="event.preventDefault();
-                            document.getElementById('delete-form').submit();" class="table-button table-button-red">
-                            <em class="fas fa-trash"></em>
-                        </a>
-
-                        <form id="delete-form" action="customers/delete/{{ $customer->id }}" method="POST" class="d-none">
+                        <form action="customers/delete/{{ $customer->id }}" method="POST">
                             @csrf
                             @method('delete')
+                            <button class="table-button table-button-red">
+                                <em class="fas fa-trash"></em>
+                            </button>
                         </form>
                     </td>
                 <tr>

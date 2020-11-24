@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 
 use Auth;
+use Hash;
 use Redirect;
 
 class UserController extends Controller
@@ -25,18 +26,33 @@ class UserController extends Controller
         $updateData = User::findOrFail( $id );
 
         $userName = $request->input('name');
-        
+
         $userEmail = $request->input('email');
-        
+
         $userPassword = $request->input('password');
 
-        $updateData->update( $request->all() +
-        [
-            'updated_by' => $updateUsername,
-            'updated_at' => $updateCurrentTime,
-        ]);
+        $updateCurrentTime = now()->timestamp;
+
+        if($userPassword == null)
+        {
+            $updateData->update( $request->except(
+            [
+                'password'
+            ]));
+        }
+        else
+        {
+            $updateData->update( $request->all() +
+            [
+                'name' => $userName,
+                'email' => $userEmail,
+                'password' => $userPassword,
+                'updated_at' => $updateCurrentTime,
+            ]);
+        }
 
         return Redirect::to('/customers');
+
     }
 
     public function delete( $id )

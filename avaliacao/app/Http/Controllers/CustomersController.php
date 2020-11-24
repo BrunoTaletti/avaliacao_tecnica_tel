@@ -30,11 +30,11 @@ class CustomersController extends Controller
         $addCustomer = new Customer;
 
         $addUsername = Auth::user()->name;
-        
+
         $birthPlace = $request->input('birthPlace');
-        
+
         $birthDate = $request->input('birthDate');
-        
+
         if($birthPlace == "SP")
         {
             $request->validate(
@@ -45,7 +45,7 @@ class CustomersController extends Controller
                 'rg.required' => 'O campo RG é obrigatório.'
             ]);
         }
-        
+
         if($birthPlace == "BA")
         {
             $request->validate(
@@ -57,14 +57,14 @@ class CustomersController extends Controller
             ]);
         }
 
-        echo $birthPlace;
-
         $addCustomer = $addCustomer->create( $request->all() +
         [
+            'birth_date' => $birthDate,
+            'birth_place' => $birthPlace,
             'created_by' => $addUsername
         ]);
 
-        return Redirect::to('/customers');
+        return Redirect::to('customers');
     }
 
     public function edit( $id )
@@ -91,7 +91,7 @@ class CustomersController extends Controller
             'updated_at' => $updateCurrentTime,
         ]);
 
-        return Redirect::to('/customers');
+        return Redirect::to('customers');
     }
 
     public function delete( $id )
@@ -100,6 +100,6 @@ class CustomersController extends Controller
 
         $deleteData->delete();
 
-        return Redirect::to('/customers');
+        return Redirect::to('customers');
     }
 }
