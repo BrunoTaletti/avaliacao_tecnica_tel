@@ -30,11 +30,21 @@ class UserController extends Controller
         
         $userPassword = $request->input('password');
 
-        return view('users.form',
+        $updateData->update( $request->all() +
         [
-            'user_data' => $updateData
+            'updated_by' => $updateUsername,
+            'updated_at' => $updateCurrentTime,
         ]);
 
         return Redirect::to('/customers');
+    }
+
+    public function delete( $id )
+    {
+        $deleteData = User::findOrFail( $id );
+
+        $deleteData->delete();
+
+        return Redirect::to('/home');
     }
 }

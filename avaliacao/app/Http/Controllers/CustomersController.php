@@ -58,13 +58,13 @@ class CustomersController extends Controller
         }
 
         echo $birthPlace;
-/*
+
         $addCustomer = $addCustomer->create( $request->all() +
         [
             'created_by' => $addUsername
         ]);
 
-        return Redirect::to('/customers'); */
+        return Redirect::to('/customers');
     }
 
     public function edit( $id )
@@ -101,18 +101,5 @@ class CustomersController extends Controller
         $deleteData->delete();
 
         return Redirect::to('/customers');
-    }
-
-    public function verify(){
-        if($birthPlace == "SP")
-        {
-            $request->validate(
-            [
-                'rg' => 'required'
-            ],
-            [
-                'rg.required' => 'O campo RG é obrigatório.'
-            ]);
-        }
     }
 }

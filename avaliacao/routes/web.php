@@ -26,7 +26,6 @@ Route::group(['middleware' => 'web'], function ()
 });
 
 Route::get('/customers',[App\Http\Controllers\CustomersController::class, 'list'])->name('customers.list')->middleware('auth');
-
 Route::get('/customers/new',[App\Http\Controllers\CustomersController::class, 'new'])->name('customers.form')->middleware('auth');
 Route::get('/customers/{id}/edit',[App\Http\Controllers\CustomersController::class, 'edit'])->name('customers.form')->middleware('auth');
 
@@ -36,3 +35,4 @@ Route::delete('/customers/delete/{id}',[App\Http\Controllers\CustomersController
 
 Route::get('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('users.form')->middleware('auth');
 Route::post('/user/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('users.update')->middleware('auth');
+Route::get('/user/delete/{id}',[App\Http\Controllers\UserController::class, 'delete'])->name('users.delete')->middleware('auth');
