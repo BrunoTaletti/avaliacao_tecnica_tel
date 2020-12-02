@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
 
-use Auth;
-use Hash;
-use Redirect;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -29,7 +27,7 @@ class UserController extends Controller
 
         $userEmail = $request->input('email');
 
-        $userPassword = $request->input('password');
+        $userPassword = User::cryptPassword($request->input('password'));
 
         $updateCurrentTime = now()->timestamp;
 
@@ -42,7 +40,7 @@ class UserController extends Controller
         }
         else
         {
-            $updateData->update( $request->all() +
+            $updateData->update(
             [
                 'name' => $userName,
                 'email' => $userEmail,
@@ -51,7 +49,7 @@ class UserController extends Controller
             ]);
         }
 
-        return Redirect::to('/customers');
+        return Redirect::to('/customers'); 
 
     }
 

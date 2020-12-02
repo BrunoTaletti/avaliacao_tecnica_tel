@@ -5,6 +5,7 @@
 @section('subtitle', 'Vamos começar!')
 
 @section('content')
+<script src="https://kit.fontawesome.com/8014fa37a7.js" crossorigin="anonymous"></script>
     <a class="button-card" href="{{ url('customers') }}">
         <div class="section">
             <em class="fas fa-user-circle"></em>

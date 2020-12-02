@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 
-use Auth;
-use Redirect;
+use Illuminate\Support\Facades\Auth as Auth;
+use Illuminate\Support\Facades\Redirect as Redirect;
 
 class CustomersController extends Controller
 {
@@ -61,7 +61,8 @@ class CustomersController extends Controller
         [
             'birth_date' => $birthDate,
             'birth_place' => $birthPlace,
-            'created_by' => $addUsername
+            'created_by' => $addUsername,
+            'updated_by' => date('Y-m-d H:i:s')
         ]);
 
         return Redirect::to('customers');
